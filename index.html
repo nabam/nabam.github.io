@@ -1,0 +1,118 @@
+<!DOCTYPE html />
+<html>
+<head>
+<title>>> www.nabam.net</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta content="https://server01.nabam.net/preview.png" property="og:image" />
+<meta content=">> www.nabam.net" property="og:title" />
+<link href='https://fonts.googleapis.com/css?family=Roboto:300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=VT323' rel='stylesheet' type='text/css'>
+<style>
+html, body, div {margin: 0;padding: 0;}
+
+.omni {
+  width: 100vw;
+  height: 100vh;
+  background-image: url('./background.png');
+  background-size: cover;
+  color: #fff;
+}
+
+div.code, ul.links {
+  width: 40vw;
+        left: 60vw;
+        white-space: nowrap;
+}
+
+div.code {
+  position: absolute;
+  top: 11vh;
+  font-size: 4.5vmin;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 7vmin;
+  font-family: 'VT323', 'Courier', 'Helvetica', sans;
+  color: rgba(0,0,0,.7);
+}
+
+ul.links {
+  position: absolute;
+  bottom: 2vmin;
+  font-size: 2.5vmin;
+  font-weight: 300;
+  font-family: 'Roboto', 'Arial', 'Helvetica', sans;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+  ul.links li {
+    display: inline-block;
+    margin: 0 3vh 0 0;
+    padding: 0;
+  }
+    ul.links li a {
+      text-decoration: none;
+      color: inherit;
+    }
+    ul.links li a:hover {
+      border-style: solid;
+      border-color: rgba(255,255,255,.6);
+      border-width: 0 0 thin;
+    }
+
+@media screen and (max-aspect-ratio: 6/5) {
+
+  div.code, ul.links {
+    left: 0vmin;
+    width: 100vmin;
+    text-align: center;
+  }
+
+  div.code {
+    font-size: 7vmin;
+    visibility: hidden;
+  }
+
+  ul.links {
+    font-size: 4vmin;
+  }
+
+}
+</style>
+</head>
+<body>
+<script>
+  if (window.location.hostname == "nabam.net") {
+     window.location.replace('http://www.nabam.net'+window.location.pathname);
+  }
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-66483117-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<div class="omni" >
+
+  <div class="code">
+  46 75 63 6B 20 69 74 2C<br>
+  20 44 75 64 65 2C 20 6C<br>
+  65 74 27 73 20 67 6F 20<br>
+  62 6F 77 6C 69 6E 67 0A<br>
+  </div>
+
+  <ul class="links">
+    <li><a href="https://github.com/nabam/" target="_blank">Github</a></li>
+    <li><a href="https://twitter.com/nabamx" target="_blank">Twitter</a></li>
+    <li><a href="https://ru.linkedin.com/pub/lev-popov/62/a83/3a2" target="_blank">LinkedIn</a></li>
+  </ul>
+
+</div>
+
+</body>
+</html>
