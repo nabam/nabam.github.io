@@ -13,7 +13,7 @@
     var userId = "1202802754";
     var accessToken = "1202802754.5b9e1e6.11673ee643184beeb653324f5234e59e";
     var rDisplay = "5";
-    var cDisplay = "1";
+    var cDisplay = "4";
     $.ajax({
       type: "GET",
       dataType: "jsonp",
@@ -23,9 +23,9 @@
         p = 0;
         for (var j = 0; j < rDisplay; j++) {
           for (var i = 0, p; i < cDisplay; i++, p++) {
-            $(".insta").append("<a target='_blank' href='" + data.data[i].link +"'><img class='instagram-image' src='" + data.data[p].images.low_resolution.url +"'/></a>");
+            $(".insta-hidden").append("<a target='_blank' href='" + data.data[i].link +"'><img class='instagram-image' src='" + data.data[p].images.low_resolution.url +"'/></a>");
           }
-          $(".insta").append("<br/>")
+          $(".insta-hidden").append("<br/>")
         }
       }
     });
@@ -48,7 +48,7 @@ body {
 }
 
 div.code, ul.links {
-  right: 27vh;
+  right: 10vh;
   text-align: left;
   white-space: nowrap;
   position: absolute;
@@ -58,13 +58,40 @@ div.code, ul.links {
 div.insta {
   right: 0;
   top: 0;
+  width: 2vh;
+  height: 100vh;
   position: absolute;
+}
+
+div.insta-hidden {
+  width: 80vh;
+  right: 0;
+  top: 0;
+  position: absolute;
+  display: none;
+}
+
+div.insta:hover div.insta-hidden {
+  display: block;
 }
 
 .instagram-image {
   height: 20vh;
   outline: 1px solid black;
   outline-offset: -1px;
+}
+
+div.spotify {
+  height: 50;
+  width: 50;
+}
+
+div.spotify-hidden {
+  display: none;
+}
+
+div.spotify:hover div.spotify-hidden {
+    display:block;
 }
 
 div.code {
@@ -104,17 +131,13 @@ ul.links {
     }
 
 @media screen and (max-aspect-ratio: 9/6) {
-  div.insta {
-    visibility: hidden;
-  }
-
-  div.code, ul.links {
-    right: 7vh;
+  .omni {
+    background-position: -100px 0px;
   }
 
   @media screen and (max-aspect-ratio: 6/5) {
 
-    div.code {
+    div.code, div.spotify, div.insta{
       visibility: hidden;
     }
 
@@ -124,10 +147,6 @@ ul.links {
       text-align: center;
       right: 0;
       bottom: 0;
-    }
-
-    .omni {
-      background-position: -50px 0px;
     }
 
     @media screen and (max-aspect-ratio: 4/5) {
@@ -158,9 +177,6 @@ ul.links {
 
 <div class="omni" >
 
-  <div class="insta">
-  </div>
-
   <div class="code">
   46 75 63 6B 20 69 74 2C<br>
   20 44 75 64 65 2C 20 6C<br>
@@ -174,8 +190,19 @@ ul.links {
     <li><a href="https://ru.linkedin.com/pub/lev-popov/62/a83/3a2" target="_blank">LinkedIn</a></li>
     <li><a href="leo.gpg" target="_blank">GPG Key</a></li>
   </ul>
-</div>
 
+  <div class="spotify">
+    <div class="spotify-hidden">
+      <iframe src="https://embed.spotify.com/?uri=spotify%3Auser%3Aspotifydiscover%3Aplaylist%3A3vOIYIpHSYfmNOYehkxqri" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+    </div>
+  </div>
+
+  <div class="insta">
+    <div class="insta-hidden">
+    </div>
+  </div>
+
+</div>
 </body>
 </html>
 
