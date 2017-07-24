@@ -7,30 +7,6 @@
 <meta content=">> www.nabam.net" property="og:title" />
 <link href='https://fonts.googleapis.com/css?family=Roboto:300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=VT323' rel='stylesheet' type='text/css'>
-<script type="text/javascript" src="https://code.jquery.com/jquery-1.10.0.min.js"></script>
-<script>
-  (function ($) {
-    var userId = "1202802754";
-    var accessToken = "1202802754.5b9e1e6.11673ee643184beeb653324f5234e59e";
-    var rDisplay = "5";
-    var cDisplay = "4";
-    $.ajax({
-      type: "GET",
-      dataType: "jsonp",
-      cache: false,
-      url: "https://api.instagram.com/v1/users/"+userId+"/media/recent/?access_token="+accessToken,
-      success: function(data) {
-        p = 0;
-        for (var j = 0; j < rDisplay; j++) {
-          for (var i = 0, p; i < cDisplay; i++, p++) {
-            $(".insta-hidden").append("<a target='_blank' href='" + data.data[i].link +"'><img class='instagram-image' src='" + data.data[p].images.low_resolution.url +"'/></a>");
-          }
-          $(".insta-hidden").append("<br/>")
-        }
-      }
-    });
-  })(jQuery);
-</script>
 <style>
 
 html, body, div {margin: 0; padding: 0}
@@ -191,18 +167,6 @@ ul.links {
     <li><a href="https://ru.linkedin.com/pub/lev-popov/62/a83/3a2" target="_blank">LinkedIn</a></li>
     <li><a href="https://keybase.io/nabam" target="_blank">Keybase</a></li>
   </ul>
-
-<!--  <div class="spotify">
-    <div class="spotify-hidden">
-      <iframe src="https://embed.spotify.com/?uri=spotify%3Auser%3Aspotifydiscover%3Aplaylist%3A3vOIYIpHSYfmNOYehkxqri" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
-    </div>
-  </div>
-
- <div class="insta">
-    <div class="insta-hidden">
-    </div>
-  </div> -->
-
 </div>
 </body>
 </html>
