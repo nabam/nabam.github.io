@@ -1,24 +1,27 @@
 <!DOCTYPE html />
 <html>
 <head>
-<title>>> www.nabam.net</title>
+<title>Leo Popov</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta content="http://nabam.net/preview.png" property="og:image" />
-<meta content=">> www.nabam.net" property="og:title" />
+<meta content="Leo Popov" property="og:title" />
+<meta content="My personal page." property="og:description">
+<meta name="keywords" content="Blog, Nabam, nabam.net, Lev Popov, Leo Popov">
 <link href='https://fonts.googleapis.com/css?family=Roboto:300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=VT323' rel='stylesheet' type='text/css'>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <style>
 
 html, body, div {margin: 0; padding: 0}
 
 body {
-  background-color: black;
+  background-color: white;
 }
 
 .omni {
   width: 100vw;
   height: 100vh;
-  background-image: url('./background.png');
+  background-image: url('./background.jpg');
   background-size: cover;
   color: #fff;
 }
@@ -29,46 +32,6 @@ div.code, ul.links {
   white-space: nowrap;
   position: absolute;
   float: right;
-}
-
-div.insta {
-  right: 0;
-  top: 0;
-  width: 2vh;
-  height: 100vh;
-  position: absolute;
-}
-
-div.insta-hidden {
-  width: 80vh;
-  right: 0;
-  top: 0;
-  position: absolute;
-  display: none;
-  white-space: nowrap;
-}
-
-div.insta:hover div.insta-hidden {
-  display: block;
-}
-
-.instagram-image {
-  height: 20vh;
-  outline: 1px solid black;
-  outline-offset: -1px;
-}
-
-div.spotify {
-  height: 50;
-  width: 50;
-}
-
-div.spotify-hidden {
-  display: none;
-}
-
-div.spotify:hover div.spotify-hidden {
-    display:block;
 }
 
 div.code {
@@ -109,12 +72,12 @@ ul.links {
 
 @media screen and (max-aspect-ratio: 9/6) {
   .omni {
-    background-position: -100px 0px;
+    background-position: 0px 0px;
   }
 
   @media screen and (max-aspect-ratio: 6/5) {
 
-    div.code, div.spotify, div.insta{
+    div.code {
       visibility: hidden;
     }
 
@@ -128,7 +91,7 @@ ul.links {
 
     @media screen and (max-aspect-ratio: 4/5) {
       .omni {
-        background-position: -170px 0px;
+        background-position: 0px 0px;
       }
     }
   }
@@ -162,11 +125,21 @@ ul.links {
   </div>
 
   <ul class="links">
+    <li><a href="#" id="blog_link">Blog</a></li>
     <li><a href="https://github.com/nabam/" target="_blank">Github</a></li>
     <li><a href="https://twitter.com/nabamx" target="_blank">Twitter</a></li>
     <li><a href="https://ru.linkedin.com/pub/lev-popov/62/a83/3a2" target="_blank">LinkedIn</a></li>
     <li><a href="https://keybase.io/nabam" target="_blank">Keybase</a></li>
   </ul>
 </div>
+<script>
+  $( "#blog_link" ).click(function() {
+    document.body.style.backgroundColor = "white";
+    $( ".omni" ).fadeOut( "slow", function() {
+    window.location.replace('http://blog.nabam.net');
+  });
+
+  });
+</script>
 </body>
 </html>
